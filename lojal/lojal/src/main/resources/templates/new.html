@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Loja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="container" >
+		 <div class="content">
+			<div id="tabela" align="center">
+				<h1>Lista de produtos</h1>
+				<br></br>
+				<table border="1" cellpadding="10">
+					<thead>
+						<tr>
+							<th>Produto id</th>
+							<th>Nome</th>
+							<th>Marca</th>
+							<th>Made in</th>
+							<th>Preco</th>
+							<th>acoes</th>
+						</tr>	
+					</thead>
+					<tbody>
+						<tr th:each="product: ${listProducts}">
+							<td th:text="${product.id_product}">Produto id</td>
+							<td th:text="${product.name}">nome</td>
+							<td th:text="${product.brand}">marca</td>
+							<td th:text="${product.madein}">made in</td>
+							<td th:text="${product.price}">Preco</td>
+							<td>
+								<a th:href="@{'/edit/' + ${product.id_product}}">Editar</a>
+								&nbsp;&nbsp;&nbsp;
+								<a th:href="@{'/delete/' + ${product.id_product}}">Deletar</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>	
+						<p class="link">  
+					            Quer ir para cadastro?
+					            <a href="/"> Ir para Cadastro </a>
+				         </p>
+			</div>
+		</div>
+	</div>
+</body> 	
+</html>

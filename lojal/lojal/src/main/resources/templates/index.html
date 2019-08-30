@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário de Login e Registro com HTML5 e CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	 <div class="container" >
+	    <a class="links" id="paracadastro"></a>
+	    <a class="links" id="paratabela"></a>
+	  
+	    
+		 <div class="content">
+	   		
+		      	 
+			    <div id="cadastro">
+					<form action="#" th:action="@{/save}" th:object="${product}" method="post" >
+						 <h1>Cadastro</h1> 
+						<p>
+						
+							<label for="name">Nome</label>
+							<input type="text" name ="name" id="name"/> 
+						</p>
+				
+						
+						<p>
+						
+							<label for="brand">Marca</label>
+							<input type="text" name = "brand" id="brand"/> 
+						</p>
+						
+						<p>
+						
+							<label for="madein">Onde foi feito?</label>
+							<input type="text" name = "madein" id="madein"/> 
+						</p>
+						
+						<p>
+						
+							<label for="price">Preço</label>
+							<input type="number" name ="price" id="price"/> 
+						</p>
+								
+						<p>
+							<input type="submit" value ="enviar">
+						
+						</p>
+						
+						<p class="link">  
+				            Quer ir para tabela?
+				            <a href="new"> Ir para Tabela </a>
+			          	</p>
+						
+					</form>
+				</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>
+	      	
+		 
+			 

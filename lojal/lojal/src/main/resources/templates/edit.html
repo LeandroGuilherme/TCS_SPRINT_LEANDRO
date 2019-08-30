@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Editar Produto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+<div class="container" >
+	<div class="content">
+		<div id="cadastro">
+				<form action="#" th:action="@{/save}" th:object="${product}" method="post">
+				<h1>Editar Cadastro</h1> 
+						<p align="center">
+							<label for="id_product">Id</label>
+							<input th:value="${product.id_product}" type="hidden"  name="id_product" id="id_product"/>
+						
+						</p>
+						
+						<p>
+							
+							<label for="name">Nome</label>
+							<input th:value="${product.name}" type="text" name ="name" id="name"/> 
+						</p>
+				
+						
+						<p>
+						
+							<label for="brand">Marca</label>
+							<input th:value="${product.brand}" type="text" name = "brand" id="brand"/> 
+						</p>
+						
+						<p>
+						
+							<label for="madein">Onde foi feito?</label>
+							<input th:value="${product.madein}" type="text" name = "madein" id="madein"/> 
+						</p>
+						
+						<p>
+						
+							<label for="price">Preço</label>
+							<input th:value="${product.price}" type="number" name ="price" id="price"/> 
+						</p>
+								
+						<p>
+							<input type="submit" value ="enviar">
+						
+						</p>
+						
+						<p class="link">  
+				            Quer ir para tabela?
+				            <a href="/new"> Ir para Tabela </a>
+			          	</p>
+	
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
